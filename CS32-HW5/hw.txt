@@ -1,0 +1,114 @@
+1a.
+                                                  50
+ 
+                                   20                             60
+ 
+                      10                        40                                   70
+           
+                15             30                 64               80
+                              23        36                       75 
+1b.
+Pre-Order
+1.         50
+2.         20
+3.         10
+4.         15
+5.         40
+6.         30
+7.         23
+8.         36
+9.         60
+10.  70
+11.  64
+12.  80
+13.  75
+                In-Order
+1.         10
+2.         15
+3.         20
+4.         23
+5.         30
+6.         36
+7.         40
+8.         50
+9.         60
+10.  64
+11.  70
+12.  75
+13.  80
+                Post-order
+1.         15
+2.         10
+3.         23
+4.         36
+5.         30
+6.         40
+7.         20
+8.         64
+9.         75
+10.  80
+11.  70
+12.  60
+13.  50
+ 
+ 
+1c.
+                                      
+                                            50
+ 
+                             15                             60
+ 
+                      10                40                         70
+           
+                             36                 64               80
+                              23                                75
+ 
+ 
+2a.
+struct Node
+{
+                Node(const int &myVal)
+{
+value = myVal;
+parent=left = right = nullptr;
+}
+ 
+int value;
+Node *left,*right,*parent;
+};
+2b.
+void insert(int &value)
+If the tree is empty:
+                Dynamically allocate a new node
+                Assign it the passed in value.
+                Return.
+Start at the root
+Repeatedly until returned (which is guaranteed):
+                If the current node’s value is equal to the inputted value, return
+ 
+                If the current node’s value is greater than the inputted value
+                            If the right child, move there
+                            Else allocate a new node as the right child of the current node and set it’s
+                            value to the inputted value and its’s parent to the current node and return.
+If the current node’s value is lesser than the inputted value
+                If the left child, move there
+                Else allocate a new node as the leffchild of the current node and set it’s
+                value to the inputted value and its’s parent to the current node and return.
+ 
+           
+ 
+3a.
+                            7
+                        5                  6
+               3           1          2
+3b. [7,5,6,3,1,2]
+3c. [6,5,2,3,1]
+ 
+4a. O(C+S)
+4b. O(log(C)+S)
+4c. O(log(C)+log(S))
+4d. O(log(S))
+4e. O(1)
+4f. O(log(C)+S)
+4g. O(S+log(S))
+4h. O(C*log(S))
